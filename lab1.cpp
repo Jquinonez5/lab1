@@ -23,6 +23,7 @@ using namespace std;
 class Global {
 public:
 	int xres, yres;
+	float r, g, b;
 	Global();
 } g;
 
@@ -79,6 +80,9 @@ Global::Global()
 {
 	xres = 400;
 	yres = 200;
+
+	r = 1.0;
+	g = 0.6;
 }
 
 X11_wrapper::~X11_wrapper()
@@ -253,7 +257,11 @@ void render()
 	glClear(GL_COLOR_BUFFER_BIT);
 	//Draw box.
 	glPushMatrix();
+
+	glColor3ub(g.r, g.g, g.b);
+
 	glColor3ub(150, 160, 220);
+
 	glTranslatef(pos[0], pos[1], 0.0f);
 	glBegin(GL_QUADS);
 		glVertex2f(-w, -w);
