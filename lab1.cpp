@@ -1,6 +1,6 @@
 //modified by: Jesus Quinonez 
 //date: 8/29/22
-//new updateeeeeeeeeeeeeee111
+//final update
 //
 //author: Gordon Griesel
 //date: Spring 2022
@@ -266,6 +266,11 @@ void render()
     glClear(GL_COLOR_BUFFER_BIT);
     //Draw box.
     //good till here
+	
+    if (pos[0] < w)
+    {
+    }
+    else
 
     glPushMatrix();
 
